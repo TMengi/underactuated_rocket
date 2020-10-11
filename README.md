@@ -14,9 +14,9 @@ The control scheme is described in the above Overleaf document.
 
 The following plots show the rocket position, rocket attitude, and point mass position for a constant reference attitude angle of 10 deg.
 
-![Plot of xy rocket position](position.png)
+![Plot of xy rocket position](plots/position.png)
 
-![Plot of rocket attitude angle](attitude.png)
+![Plot of rocket attitude angle](plots/attitude.png)
 
-![Plot of point mass position](point_mass.png)
+![Plot of point mass position](plots/point_mass.png)
 
