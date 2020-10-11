@@ -11,41 +11,42 @@ r_ref = out.r_ref.Data;
 
 % trajectory
 figure(1);
-plot(x, y);
-% axis('square');
+plot(x, y, 'LineWidth', 2);
+axis('equal');
 grid on;
-xlabel('x');
-ylabel('y');
-title('position');
+xlabel('x [m]');
+ylabel('y [m]');
+title('rocket position');
 
 % reference trajectory
-y_ref = linspace(0, max(y), length(t))';
-x_ref = y_ref.*tan(theta_ref);
-hold on;
-plot(x_ref, y_ref, 'k-');
-hold off;
+% y_ref = linspace(0, max(y), length(t))';
+% x_ref = y_ref.*tan(theta_ref);
+% hold on;
+% plot(x_ref, y_ref, 'k-');
+% hold off;
 
 % theta
 figure(2);
-plot(t, 180/pi*theta);
+plot(t, 180/pi*theta, 'LineWidth', 2);
 hold on;
-plot(t, 180/pi*theta_ref*ones(size(t)), 'r--');
+plot(t, 180/pi*theta_ref*ones(size(t)), 'r--', 'LineWidth', 2);
 hold off;
 grid on;
 xlabel('time [s]');
-ylabel('attitude [deg]');
+ylabel('$\theta$ [deg]');
 title('attitude angle');
 legend({'actual', 'reference'}, 'location', 'best');
 
 % r
 figure(3);
-plot(t, r);
+plot(t, r, 'LineWidth', 2);
 hold on;
-plot(t, r_ref, 'r--');
+plot(t, r_ref, 'r--', 'LineWidth', 2);
 hold off;
 grid on;
 ylim([-1, 1]);
 xlabel('time [s]');
+ylabel('$r$');
 title('point mass position');
 legend({'actual', 'reference'}, 'location', 'best');
 max(r)

@@ -21,10 +21,3 @@ p_BC = [0; d0] + mc/M*[r*d1; d0];
 v_BC = zeros(2, 0);
 theta = 0;
 d_theta = 0;
-
-% simultion
-% ts = .1; % [s]
-% T_final = 60; % [s]
-
-% straight line trajectory
-
